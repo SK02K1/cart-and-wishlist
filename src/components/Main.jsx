@@ -1,7 +1,6 @@
 import { useState } from "react";
-import { Home } from "../pages/Home";
-import { Products } from "../pages/Products";
-import { Navbar } from "./Navbar";
+import { Navbar } from "./components";
+import { Home, Products } from "../pages/pages";
 
 export const Main = () => {
   const [route, setRoute] = useState("/");
