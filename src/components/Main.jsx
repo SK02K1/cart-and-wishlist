@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Home } from "../pages/Home";
+import { Products } from "../pages/Products";
 import { Navbar } from "./Navbar";
 
 export const Main = () => {
@@ -9,6 +10,7 @@ export const Main = () => {
     <div>
       <Navbar handleRoute={updateRoute} />
       {route === "/" && <Home />}
+      {route === "/products" && <Products />}
     </div>
   );
 };
