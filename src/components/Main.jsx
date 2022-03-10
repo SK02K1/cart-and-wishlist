@@ -7,7 +7,7 @@ export const Main = () => {
   const updateRoute = (newRoute) => setRoute(newRoute);
   return (
     <div>
-      <Navbar handleRoute={updateRoute} />
+      <Navbar handleRoute={updateRoute} route={route} />
       {route === "/" && <Home />}
       {route === "/products" && <Products />}
       {route === "/wishlist" && <Wishlist />}

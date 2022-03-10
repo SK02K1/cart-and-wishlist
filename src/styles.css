@@ -1,8 +1,17 @@
+.navbar {
+  background-color: transparent;
+  border-bottom: 1px solid black;
+}
+
 .nav-link {
   background-color: transparent;
-  color: white;
 }
 
 .products {
   padding: 1rem 0 2rem 0;
+}
+
+.active-tab-true {
+  font-weight: 600;
+  border-bottom: 1px solid var(--clr-primary-500);
 }
