@@ -1,18 +1,26 @@
-export const Navbar = () => {
+export const Navbar = ({ handleRoute }) => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <button className="nav-link">FS.</button>
+        <button onClick={() => handleRoute("/")} className="nav-link">
+          FS.
+        </button>
       </div>
       <ul className="links">
         <li>
-          <button className="nav-link">Products</button>
+          <button onClick={() => handleRoute("/products")} className="nav-link">
+            Products
+          </button>
         </li>
         <li>
-          <button className="nav-link">Wishlist</button>
+          <button onClick={() => handleRoute("/wishlist")} className="nav-link">
+            Wishlist
+          </button>
         </li>
         <li>
-          <button className="nav-link">Cart</button>
+          <button onClick={() => handleRoute("/cart")} className="nav-link">
+            Cart
+          </button>
         </li>
       </ul>
     </nav>
