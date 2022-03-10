@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Navbar } from "./components";
-import { Home, Products } from "../pages/pages";
+import { Home, Products, Wishlist } from "../pages/pages";
 
 export const Main = () => {
   const [route, setRoute] = useState("/");
@@ -10,6 +10,7 @@ export const Main = () => {
       <Navbar handleRoute={updateRoute} />
       {route === "/" && <Home />}
       {route === "/products" && <Products />}
+      {route === "/wishlist" && <Wishlist />}
     </div>
   );
 };
