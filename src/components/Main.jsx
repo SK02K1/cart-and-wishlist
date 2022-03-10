@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Home } from "../pages/Home";
 import { Navbar } from "./Navbar";
 
 export const Main = () => {
@@ -7,7 +8,7 @@ export const Main = () => {
   return (
     <div>
       <Navbar handleRoute={updateRoute} />
-      <p>{route}</p>
+      {route === "/" && <Home />}
     </div>
   );
 };
