@@ -39,3 +39,28 @@
   cursor: not-allowed;
   background-color: var(--clr-primary-200);
 }
+
+.cart-detail-card {
+  box-shadow: var(--shadow);
+  border-radius: var(--br-lg);
+  padding: 1rem 2rem;
+  width: 70%;
+  margin: 1rem auto;
+}
+
+.cart-detail-card .btn {
+  width: 100%;
+}
+
+.cart-detail-card h2 {
+  border-bottom: 1px solid var(--gray);
+  border-top: 1px solid var(--gray);
+  padding: 0.5rem 0;
+}
+
+.cart-detail-card div,
+.cart-detail-card h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

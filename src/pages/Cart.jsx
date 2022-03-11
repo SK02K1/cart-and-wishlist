@@ -1,4 +1,4 @@
-import { CartItem } from "../components/components";
+import { CartInfo, CartItem } from "../components/components";
 import { useCart } from "../contexts/cart-context";
 
 export const Cart = () => {
@@ -9,7 +9,10 @@ export const Cart = () => {
   return (
     <div>
       <h1 className="text-2xl text-center m-sm-tb">Cart</h1>
-      {!Object.keys(cartItems).length && (
+
+      {Object.keys(cartItems).length ? (
+        <CartInfo cartItems={cartItems} />
+      ) : (
         <p className="text-center">
           cart is empty{" "}
           <span role="img" aria-label="cart emoji">
@@ -17,6 +20,7 @@ export const Cart = () => {
           </span>
         </p>
       )}
+
       <div className="cart-items grid-container auto">
         {Object.values(cartItems).map((itemInfo) => (
           <CartItem key={itemInfo.id} itemInfo={itemInfo} />

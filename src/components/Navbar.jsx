@@ -1,14 +1,12 @@
 import { useCart } from "../contexts/cart-context";
+import { getNumberOfItemsInCart } from "../modules/modules";
 
 export const Navbar = ({ handleRoute, route }) => {
   const {
     state: { cartItems }
   } = useCart();
 
-  const itemsInCart = Object.values(cartItems).reduce(
-    (numOfItemsInCart, { qty }) => numOfItemsInCart + qty,
-    0
-  );
+  const numberOfItemsInCart = getNumberOfItemsInCart(cartItems);
 
   return (
     <nav className="navbar">
@@ -31,7 +29,7 @@ export const Navbar = ({ handleRoute, route }) => {
         <li className={`active-tab-${route === "/cart"}`}>
           <button onClick={() => handleRoute("/cart")} className="nav-link">
             Cart(
-            {itemsInCart})
+            {numberOfItemsInCart})
           </button>
         </li>
       </ul>
