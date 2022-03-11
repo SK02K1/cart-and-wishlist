@@ -2,7 +2,7 @@ import { useCart } from "../contexts/cart-context";
 
 export const CartItem = ({ itemInfo }) => {
   const { id, name, price, img, qty } = itemInfo;
-  const { removeFromCart } = useCart();
+  const { removeFromCart, incrementQty } = useCart();
 
   return (
     <div>
@@ -20,7 +20,10 @@ export const CartItem = ({ itemInfo }) => {
               <span className="material-icons-outlined"> remove </span>
             </button>
             <div className="qty">{qty}</div>
-            <button className="btn btn-primary">
+            <button
+              onClick={() => incrementQty(id)}
+              className="btn btn-primary"
+            >
               <span className="material-icons-outlined"> add </span>
             </button>
           </div>
