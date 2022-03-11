@@ -1,5 +1,8 @@
+import { useCart } from "../contexts/cart-context";
+
 export const ProductCard = ({ itemInfo }) => {
   const { name, price, img } = itemInfo;
+  const { addToCart } = useCart();
 
   return (
     <div className="card">
@@ -14,7 +17,12 @@ export const ProductCard = ({ itemInfo }) => {
         <h3 className="card-title m-xs-tb">{name}</h3>
       </div>
       <div className="card-footer m-xs-tb">
-        <button className="btn btn-primary card-btn">Add to cart</button>
+        <button
+          onClick={() => addToCart(itemInfo)}
+          className="btn btn-primary card-btn"
+        >
+          Add to cart
+        </button>
       </div>
     </div>
   );
