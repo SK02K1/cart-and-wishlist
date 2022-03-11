@@ -44,7 +44,7 @@
   box-shadow: var(--shadow);
   border-radius: var(--br-lg);
   padding: 1rem 2rem;
-  width: 70%;
+  width: 90%;
   margin: 1rem auto;
 }
 
@@ -63,4 +63,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (min-width: 675px) {
+  .cart-detail-card {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .cart-detail-card {
+    width: 40%;
+  }
 }
