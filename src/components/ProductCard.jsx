@@ -1,4 +1,6 @@
-export const ProductCard = ({ itemInfo: { name, price, img } }) => {
+export const ProductCard = ({ itemInfo }) => {
+  const { name, price, img } = itemInfo;
+
   return (
     <div className="card">
       <span className="material-icons-outlined card-icon-like">
