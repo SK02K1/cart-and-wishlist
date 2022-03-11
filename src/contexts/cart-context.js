@@ -19,9 +19,13 @@ const CartProvider = ({ children }) => {
     dispatch({ type: "INCREMENT_QUANTITY", payload: { id } });
   };
 
+  const decrementQty = (id) => {
+    dispatch({ type: "DECREMENT_QUANTITY", payload: { id } });
+  };
+
   return (
     <CartContext.Provider
-      value={{ state, addToCart, removeFromCart, incrementQty }}
+      value={{ state, addToCart, removeFromCart, incrementQty, decrementQty }}
     >
       {children}
     </CartContext.Provider>

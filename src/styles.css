@@ -31,3 +31,8 @@
   padding: 0.5rem;
   margin: 0 1rem;
 }
+
+.btn-disabled {
+  cursor: not-allowed;
+  background-color: var(--clr-primary-200);
+}

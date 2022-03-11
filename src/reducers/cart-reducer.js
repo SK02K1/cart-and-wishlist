@@ -24,12 +24,22 @@ export const cartReducer = (
       const cartItems = { ...state.cartItems };
       delete cartItems[id];
       return { ...state, cartItems };
+
     case "INCREMENT_QUANTITY":
       return {
         ...state,
         cartItems: {
           ...state.cartItems,
           [id]: { ...state.cartItems[id], qty: state.cartItems[id].qty + 1 }
+        }
+      };
+
+    case "DECREMENT_QUANTITY":
+      return {
+        ...state,
+        cartItems: {
+          ...state.cartItems,
+          [id]: { ...state.cartItems[id], qty: state.cartItems[id].qty - 1 }
         }
       };
 
